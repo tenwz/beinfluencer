@@ -1,70 +1,22 @@
 <p align="center">
-  <img src="assets/logo.svg" width="132" alt="beinfluencer logo">
+  <img src="assets/logo.svg" width="96" alt="beinfluencer">
 </p>
 
 <h1 align="center">beinfluencer</h1>
 
-<p align="center">
-  <strong>让任何账号，在任何平台，成为 influencer。</strong>
-</p>
+<p align="center">让任何账号，在任何平台，成为 influencer。</p>
 
-<p align="center">
-  Any account. Any platform. Be an influencer.
-</p>
+## 状态
 
----
+初始化阶段，暂无可用代码。
 
-## 是什么
-
-输入一个账号和一个平台，输出一套能被看见、并且能持续跑下去的内容策略与执行方案。
-
-账号可以是新号、小号、企业号或某个人的个人号；平台可以是 X、Reddit、YouTube、TikTok、小红书、公众号、LinkedIn —— 流程是同一套。
-
-## 要解决的问题
-
-线上从来不缺账号，缺的是被看见的理由。平台不关心你是谁，只关心内容能不能留住人。真正卡住大多数人的不是「不会发」，而是三件事：
-
-- **不知道对谁说**：定位没想清楚，内容就没有主线
-- **不知道怎么被分发**：不同平台的算法、内容形态、节奏完全不同
-- **无法持续**：靠灵感产出，三周之后断更
-
-beinfluencer 把「一个陌生账号从 0 到被记住」拆成可以执行的步骤，让上面三件事有明确的答案，而不是靠感觉。
-
-## 工作方式
-
-| 阶段 | 要回答的问题 | 产出 |
-| --- | --- | --- |
-| 定位 | 这个账号代表谁、为谁说话、凭什么被记住 | 人设与内容主线 |
-| 内容 | 哪些选题值得做，用什么形态承载 | 选题库与内容模板 |
-| 分发 | 这个平台的算法奖励什么 | 发布节奏与平台适配 |
-| 复盘 | 什么内容真的有效，为什么 | 数据反馈与下一轮迭代 |
-
-## 项目状态
-
-🚧 **初始化阶段（2026-10）** —— 品牌、素材和仓库骨架已就位，核心能力尚未开始实现。
-
-- [x] 项目初始化、品牌与 Logo
-- [ ] 账号定位方法论（人设、受众、差异化）
-- [ ] 各平台分发规则整理（算法偏好、内容形态、节奏）
-- [ ] 内容选题与生产工作流
-- [ ] 数据复盘模板
-- [ ] 第一个从 0 开始跑通的账号样例
-
-## 仓库结构
+## 结构
 
 ```
-.
-├── assets/                 # 品牌素材
-│   ├── logo.svg            # Logo（矢量，可任意缩放）
-│   └── social-preview.png  # 社交预览图 1280×640
-├── README.md
-└── LICENSE
+assets/logo.svg           # Logo
+assets/social-preview.png # 社交预览图
 ```
-
-## 相关项目
-
-- [saasanything](https://github.com/tenwz/saasanything) — 把任何 SaaS，甚至任何人的在线业务，clone 一遍。
 
 ## License
 
-[MIT](LICENSE) © 2026 tenwz
+[MIT](LICENSE)
