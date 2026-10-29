@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="assets/platforms.svg" width="1120" alt="X · TikTok · YouTube · Instagram · Facebook · Reddit · Threads · Telegram · Discord · WeChat · Xiaohongshu · Bilibili">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/platforms-dark.svg">
+    <img src="assets/platforms-light.svg" width="1200" alt="X · TikTok · YouTube · Instagram · Facebook · Reddit · Threads · Telegram · Discord · WeChat · Xiaohongshu · Bilibili · Weibo">
+  </picture>
 </p>
 
 <p align="center">
