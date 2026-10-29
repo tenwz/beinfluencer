@@ -50,6 +50,10 @@ X 奖励观点，YouTube 奖励留存，TikTok 奖励前三秒，Reddit 奖励�
 
 初始化阶段，暂无可用代码。下一步先做「账号 + 平台 → 定位与选题」的最小闭环。
 
+## 文档
+
+- [平台起号知识库](docs/platforms/README.md) —— 13 个平台从 0 到 1 的起号方法
+
 ## License
 
 [MIT](LICENSE)
