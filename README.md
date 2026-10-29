@@ -48,26 +48,45 @@ X 奖励观点，YouTube 奖励留存，TikTok 奖励前三秒，Reddit 奖励�
 
 ## 状态
 
-初始化阶段，暂无可用代码。下一步先做「账号 + 平台 → 定位与选题」的最小闭环。
+可运行。排期、改写、发布、复盘已经串成闭环。
 
 ## 使用
 
 ```bash
 npm install
 
-# 生成 30 天排期
+# 1. 出排期
 npx tsx src/cli.ts plan --platform xiaohongshu \
-  --account "做独立开发的技术人" --niche "独立开发/出海"
+  --account "做独立开发的技术人" --niche "独立开发/出海" \
+  --json --out plan.json
 
-# 导出给发布工具
-npx tsx src/cli.ts plan --platform x --account "..." --niche "..." --json --out plan.json
-npx tsx src/cli.ts publish --plan plan.json --to postiz --dry-run
-npx tsx src/cli.ts publish --plan plan.json --to sau --dry-run
+# 2. 一个选题改写成多平台版本
+npx tsx src/cli.ts adapt --topic "为什么你的笔记没人看" \
+  --niche "独立开发" --to x,xiaohongshu,tiktok
+
+# 3. 发布（默认 dry-run，只打印 payload）
+npx tsx src/cli.ts tick --plan plan.json --to postiz --dry-run
+npx tsx src/cli.ts tick --plan plan.json --to sau --dry-run
+
+# 4. 复盘：判断该复制、该保留、还是该换钩子
+npx tsx src/cli.ts review --metrics metrics.json
 ```
 
-- `--to postiz` 走 Postiz 官方 SDK，需要 `POSTIZ_API_KEY` + `POSTIZ_INTEGRATION_ID`
-- `--to sau` 调 social-auto-upload，用 `SAU_CMD` / `SAU_ARGS` 指定命令（国内平台）
-- 两个适配器默认 dry-run，只打印将要提交的内容
+`tick` 只发「今天到期且没发过」的内容，发过的记在 `.beinfluencer/published.json`，错过的下次自动补上。挂到 cron 就是无人值守：
+
+```bash
+0 9 * * * cd /path/beinfluencer && npx tsx src/cli.ts tick --plan plan.json --to postiz >> .beinfluencer/tick.log 2>&1
+```
+
+review 的输入格式：
+
+```json
+[{ "topic": "最常见的 3 个错误", "impressions": 4200, "interactions": 210, "follows": 65 }]
+```
+
+它只用「和账号自己的中位数比」来判断赢家和淘汰，不套平台的绝对阈值——那些阈值平台从没公开过。
+
+环境变量：`POSTIZ_API_KEY`、`POSTIZ_INTEGRATION_ID`（Postiz，官方 SDK）；`SAU_CMD`、`SAU_ARGS`（social-auto-upload，国内平台）。
 
 ## 文档
 
