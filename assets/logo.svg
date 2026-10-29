@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="beinfluencer logo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#191430"/>
+      <stop offset="1" stop-color="#07050e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.42" r="0.6">
+      <stop offset="0" stop-color="#4a2f7a"/>
+      <stop offset="1" stop-color="#0b0714"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6b9d"/>
+      <stop offset="0.55" stop-color="#c44dff"/>
+      <stop offset="1" stop-color="#6c5cff"/>
+    </linearGradient>
+    <linearGradient id="accent2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b9d"/>
+      <stop offset="1" stop-color="#6c5cff"/>
+    </linearGradient>
+    <radialGradient id="dot" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0" stop-color="#ff9ec0"/>
+      <stop offset="0.5" stop-color="#d357ff"/>
+      <stop offset="1" stop-color="#6c5cff"/>
+    </radialGradient>
+    <clipPath id="circle"><circle cx="256" cy="256" r="256"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#circle)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <circle cx="256" cy="240" r="238" fill="url(#glow)" opacity="0.75"/>
+
+    <!-- 内圈 -->
+    <circle cx="256" cy="256" r="212" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.08"/>
+
+    <!-- 广播波纹 -->
+    <g fill="none" stroke="url(#accent)" stroke-linecap="round">
+      <path d="M188.1 323.9 A 96 96 0 0 1 188.1 188.1" stroke-width="22" opacity="0.95"/>
+      <path d="M323.9 188.1 A 96 96 0 0 1 323.9 323.9" stroke-width="22" opacity="0.95"/>
+
+      <path d="M152.8 359.2 A 146 146 0 0 1 152.8 152.8" stroke-width="22" opacity="0.62"/>
+      <path d="M359.2 152.8 A 146 146 0 0 1 359.2 359.2" stroke-width="22" opacity="0.62"/>
+
+      <path d="M117.4 394.6 A 196 196 0 0 1 117.4 117.4" stroke-width="22" opacity="0.34"/>
+      <path d="M394.6 117.4 A 196 196 0 0 1 394.6 394.6" stroke-width="22" opacity="0.34"/>
+    </g>
+
+    <!-- 核心账号 -->
+    <circle cx="256" cy="256" r="46" fill="url(#dot)"/>
+    <circle cx="256" cy="256" r="46" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.25"/>
+    <circle cx="242" cy="240" r="12" fill="#ffffff" opacity="0.55"/>
+  </g>
+
+  <circle cx="256" cy="256" r="252" fill="none" stroke="url(#accent2)" stroke-width="8"/>
+</svg>

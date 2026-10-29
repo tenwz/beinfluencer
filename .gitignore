@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 编辑器
+.idea/
+.vscode/
+*.swp
+
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+
+# 环境变量与密钥
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
