@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>beinfluencer · 30 天，一万粉的路径</title>
+<meta name="description" content="任何账号，任何平台。定位、改写、发布、复盘，一条流水线跑完。">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<meta property="og:title" content="beinfluencer · 30 天，一万粉的路径">
+<meta property="og:description" content="任何账号，任何平台。不靠灵感，靠排期。">
+<meta property="og:image" content="assets/social-preview.png">
+<style>
+  :root{
+    --bg:#08060f; --bg2:#0f0a1c; --text:#f4f0ff; --muted:#9c90bb; --line:rgba(255,255,255,.08);
+    --pink:#ff6b9d; --violet:#8b5cf6; --blue:#5b8cff;
+    --grad:linear-gradient(100deg,#ff6b9d,#c44dff 55%,#5b8cff);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:
+      radial-gradient(900px 600px at 50% -10%, #2a1a4d 0%, transparent 60%),
+      radial-gradient(700px 500px at 85% 30%, #1a1235 0%, transparent 65%),
+      var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .hero{padding:72px 0 32px;text-align:center}
+  .hero img.logo{width:104px;height:104px;filter:drop-shadow(0 18px 40px rgba(150,80,255,.35))}
+  h1{font-size:clamp(36px,6.4vw,68px);line-height:1.1;letter-spacing:-2px;margin:24px 0 0;font-weight:800}
+  h1 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{color:var(--muted);font-size:clamp(15px,2vw,19px);margin:18px 0 0}
+  .cta{display:inline-flex;align-items:center;gap:10px;margin-top:32px;padding:16px 30px;border-radius:999px;
+    background:var(--grad);color:#12061f;font-weight:800;text-decoration:none;font-size:17px;
+    box-shadow:0 14px 40px rgba(160,70,255,.35)}
+  .cta:hover{filter:brightness(1.06)}
+  .cta-note{color:var(--muted);font-size:13px;margin-top:12px}
+  .strip{margin:48px 0 8px;opacity:.9}
+  .strip img{width:100%;height:auto;display:block}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(24px,3.4vw,34px);letter-spacing:-.5px;margin:0 0 8px;font-weight:800}
+  .lead{color:var(--muted);margin:0 0 28px;max-width:720px}
+  p{margin:0 0 16px}
+  .muted{color:var(--muted)}
+  .big{font-size:clamp(19px,2.4vw,24px);line-height:1.6}
+  .big strong{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .cols{display:grid;gap:18px}
+  @media(min-width:760px){.cols.two{grid-template-columns:1fr 1fr}.cols.four{grid-template-columns:repeat(4,1fr)}}
+  .card{background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));
+    border:1px solid var(--line);border-radius:18px;padding:22px}
+  .card .k{font-size:13px;color:var(--pink);font-weight:700;letter-spacing:1px}
+  .card h3{margin:10px 0 8px;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:14.5px}
+  .q{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .q:last-child{border-bottom:0}
+  .q .n{font-weight:800;color:var(--violet);font-size:22px;line-height:1.2;min-width:28px}
+  .timeline{display:grid;gap:14px}
+  .tl{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .tl:last-child{border-bottom:0}
+  .tl .w{color:var(--pink);font-weight:800}
+  .no li{margin-bottom:10px}
+  ul{padding-left:20px;margin:0}
+  .two-col h4{margin:0 0 10px;font-size:16px}
+  .two-col .yes h4{color:#7ee0b0}.two-col .no-list h4{color:#ff8a8a}
+  pre{background:#0b0817;border:1px solid var(--line);border-radius:14px;padding:18px;overflow:auto;font-size:13.5px;line-height:1.7}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .foot{padding:64px 0 80px;text-align:center;border-top:1px solid var(--line)}
+  .foot small{display:block;color:#5f5478;margin-top:22px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="hero">
+    <img class="logo" src="assets/logo.svg" alt="beinfluencer">
+    <h1>30 天，<span class="grad">一万粉的路径</span></h1>
+    <p class="sub">任何账号 · 任何平台 · 不靠灵感，靠排期</p>
+    <a class="cta" href="https://t.me/beinfluencer">加入社群，领 30 天排期模板 →</a>
+    <div class="cta-note">进群先看数据，再决定要不要跑 · <a href="assets/beinfluencer-30-day-plan.pdf">先下载空白模板</a></div>
+  </header>
+
+  <div class="strip">
+    <img src="assets/platforms-dark.svg" alt="X · TikTok · YouTube · Instagram · Facebook · Reddit · Threads · Telegram · Discord · 微信 · 小红书 · B站 · 微博">
+  </div>
+
+  <section>
+    <h2>你发的每一条，都在重新开始</h2>
+    <p class="lead">不是内容不好。是平台不知道你是谁。</p>
+    <p class="big">同一个赛道里，有人发三条涨两百粉，你发三十条涨三个。差的不是努力——是<strong>平台有没有把你分进对的那群人里</strong>。</p>
+    <p class="muted">分错了，你再勤奋，也只是在给别人的爆款当分母。</p>
+  </section>
+
+  <section>
+    <h2>先回答三个问题</h2>
+    <p class="lead">答完你就知道，问题出在哪。</p>
+    <div class="q"><div class="n">1</div><div>你一共发过多少条？</div></div>
+    <div class="q"><div class="n">2</div><div>你数据最好的那条，曝光是多少？</div></div>
+    <div class="q"><div class="n">3</div><div>到今天，涨了多少粉？</div></div>
+    <p class="muted" style="margin-top:22px">三个数都低，就别怀疑天赋了——<strong style="color:var(--text)">问题在分类，不在能力。</strong></p>
+  </section>
+
+  <section>
+    <h2>起号不是创作，是答题</h2>
+    <p class="lead">平台每推一条内容，都在问同一个问题：这条该给谁看？</p>
+    <p class="big">你的前十条，就是在回答这个问题。答对了，后面每一条都有人接；答错了，你越努力，越确定「我不适合做这个」。</p>
+    <p class="muted">大多数人在第 20 条放弃，不是被市场拒绝，是被自己的前 10 条判了刑。</p>
+  </section>
+
+  <section>
+    <h2>一条流水线，从选题到涨粉</h2>
+    <div class="cols four" style="margin-top:26px">
+      <div class="card"><div class="k">01 排期</div><h3>30 天 27 条</h3><p>日期、阶段、格式、选题、钩子、该盯哪个数，一条不落。</p></div>
+      <div class="card"><div class="k">02 改写</div><h3>一稿十三平台</h3><p>X 是 thread 骨架，小红书是封面加标签，TikTok 是前三秒。不做一键同步。</p></div>
+      <div class="card"><div class="k">03 发布</div><h3>每天自动发</h3><p>挂上 cron，九点自己发。状态记录在本地，不重发，错过自动补。</p></div>
+      <div class="card"><div class="k">04 复盘</div><h3>它给判定</h3><p>高于中位 1.5 倍就复制，低于 0.5 倍改钩子。你不用纠结。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>30 天里会发生什么</h2>
+    <div class="timeline">
+      <div class="tl"><div class="w">第 1 周</div><div>你会觉得没用。前几条没人看，正常——这阶段是让平台认识你，不是让人喜欢你。</div></div>
+      <div class="tl"><div class="w">第 2 周</div><div>出现第一条明显高于中位数的内容。方向开始有了。</div></div>
+      <div class="tl"><div class="w">第 3 周</div><div>同一个结构能开始复现。这时你才知道，之前哪条是运气，哪条是方法。</div></div>
+      <div class="tl"><div class="w">第 4 周</div><div>你清楚什么该做、什么不该做。这比一万粉值钱——粉会掉，方法不会。</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>它不是什么</h2>
+    <div class="cols four no">
+      <div class="card"><h3>不是刷量工具</h3><p>买粉、互赞、群控——封号名单上全是这么干的人。</p></div>
+      <div class="card"><h3>不是一键同步</h3><p>一份内容贴遍所有平台，算法一眼识破，谁也不给你流量。</p></div>
+      <div class="card"><h3>不是保证</h3><p>它给路径和判断，不给「保证一万粉」。任何敢保证的，都在卖你一个会到期的希望。</p></div>
+    </div>
+  </section>
+
+  <section class="two-col">
+    <h2>适合谁</h2>
+    <div class="cols two" style="margin-top:22px">
+      <div class="card yes">
+        <h4>留下来的人</h4>
+        <ul>
+          <li>发了三个月，粉丝还是个位数</li>
+          <li>内容有东西，但进不了推荐</li>
+          <li>起过一个号，想把动作沉淀成 SOP</li>
+          <li>做一个新号，不想再从零试错</li>
+        </ul>
+      </div>
+      <div class="card no-list">
+        <h4>请关掉这个页面</h4>
+        <ul>
+          <li>想一夜爆红的</li>
+          <li>不愿意连续发 30 天的</li>
+          <li>指望工具替自己思考的</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>怎么开始</h2>
+    <pre><code>npm install
+
+npx tsx src/cli.ts plan --platform xiaohongshu \
+  --account "做独立开发的技术人" --niche "独立开发/出海"
+
+npx tsx src/cli.ts adapt  --topic "为什么你的笔记没人看" --to x,xiaohongshu,tiktok
+npx tsx src/cli.ts tick   --plan plan.json --to postiz
+npx tsx src/cli.ts review --metrics metrics.json</code></pre>
+  </section>
+
+  <footer class="foot">
+    <a class="cta" href="https://t.me/beinfluencer">加入社群 →</a>
+    <small>群里只聊两件事：平台实测数据、下一个选题。不发鸡汤，不卖课。</small>
+    <small><a href="https://github.com/tenwz/beinfluencer">GitHub</a> · MIT</small>
+  </footer>
+</div>
+
+</body>
+</html>

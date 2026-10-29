@@ -23,6 +23,11 @@
   <a href="https://t.me/beinfluencer"><strong>→ 加入社群，领 30 天排期模板</strong></a>
 </p>
 
+<p align="center">
+  <a href="https://tenwz.github.io/beinfluencer/">落地页</a> ·
+  <a href="assets/beinfluencer-30-day-plan.pdf">30 天排期模板（PDF）</a>
+</p>
+
 ---
 
 ## 你发的每一条，都在重新开始
