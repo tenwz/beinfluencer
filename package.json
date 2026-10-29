@@ -1,0 +1,20 @@
+{
+  "name": "beinfluencer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "让任何账号，在任何平台，成为 influencer",
+  "scripts": {
+    "plan": "tsx src/cli.ts plan",
+    "publish": "tsx src/cli.ts publish",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "optionalDependencies": {
+    "@postiz/node": "^1.0.8"
+  }
+}

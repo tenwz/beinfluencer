@@ -1,0 +1,156 @@
+import type { PlatformId, PlatformProfile } from './types.js';
+
+/**
+ * 平台档案。数据来自 docs/platforms/，改这里的前提是先改文档。
+ * cadence 是发布频率的起点，不是硬指标：先按它跑两周，再按数据调。
+ */
+export const PLATFORMS: Record<PlatformId, PlatformProfile> = {
+  x: {
+    id: 'x',
+    name: 'X',
+    cadence: [14, 14, 10],
+    formats: ['单帖（<200 字符）', 'thread（7–12 条）', '图 + 短评', '回复别人'],
+    primaryMetric: '2 小时曝光是否破 200',
+    firstGate: '发布后 2 小时曝光 >200，且来自首页推荐',
+    levers: ['抢大号发帖后 10 分钟内的回复位', '发完 2 小时内回完全部评论', '外链一律放首条回复'],
+    docs: 'docs/platforms/x.md',
+  },
+  threads: {
+    id: 'threads',
+    name: 'Threads',
+    cadence: [21, 14, 10],
+    formats: ['对话体短帖', '图/轮播', '金句图'],
+    primaryMetric: '回复数/帖',
+    firstGate: '首小时互动率高于账号均值',
+    levers: ['回复远多于发帖', '每条带 1 个窄标签', '把 IG 爆款改写成对话体'],
+    docs: 'docs/platforms/threads.md',
+  },
+  reddit: {
+    id: 'reddit',
+    name: 'Reddit',
+    cadence: [7, 3, 2],
+    formats: ['text post（800–1500 词）', '评论', 'crosspost'],
+    primaryMetric: 'upvote ratio（健康值 >90%）',
+    firstGate: '发布后 60 分钟净赞为正且进入 Rising',
+    levers: ['先评论攒 karma 再发帖', '选 1–5 万人的小 sub 验证', '链接和品牌放评论区'],
+    docs: 'docs/platforms/reddit.md',
+  },
+  telegram: {
+    id: 'telegram',
+    name: 'Telegram',
+    cadence: [7, 7, 7],
+    formats: ['图文推送', '资源帖', 'poll'],
+    primaryMetric: '浏览/订阅比',
+    firstGate: '单条浏览达到订阅数的 30% 以上',
+    levers: ['开号前存 10–20 条稿', '手动邀请前 200 个订阅者', '同量级频道等量互推'],
+    docs: 'docs/platforms/telegram.md',
+  },
+  discord: {
+    id: 'discord',
+    name: 'Discord',
+    cadence: [7, 7, 5],
+    formats: ['话题 prompt', '语音活动', '公告'],
+    primaryMetric: 'D7 留存',
+    firstGate: '新成员首条消息转化率 >20%',
+    levers: ['先把 onboarding 和 3–5 个频道配好', '私信邀请 20–50 个种子成员', '当社群养，不当获客渠道'],
+    docs: 'docs/platforms/discord.md',
+  },
+  tiktok: {
+    id: 'tiktok',
+    name: 'TikTok',
+    cadence: [7, 10, 14],
+    formats: ['9:16 竖屏 15–60 秒', '口播', '系列第 N 集'],
+    primaryMetric: '3 秒留存与完播率',
+    firstGate: '单条播放突破初始池（观察 1 小时内是否持续推）',
+    levers: ['前 3 帧给冲突/悬念', '一条只讲一件事', '发布后 30 分钟内置顶补充评论'],
+    docs: 'docs/platforms/tiktok.md',
+  },
+  youtube: {
+    id: 'youtube',
+    name: 'YouTube',
+    cadence: [3, 4, 5],
+    formats: ['长视频 8–15 分钟', 'Shorts 15–60 秒', '播放列表'],
+    primaryMetric: 'CTR + 平均观看时长',
+    firstGate: 'CTR >4% 且留存曲线无明显断崖',
+    levers: ['前 30 秒给结果不要片头', '标题覆盖搜索意图', 'Shorts 与长视频互相导流'],
+    docs: 'docs/platforms/youtube.md',
+  },
+  instagram: {
+    id: 'instagram',
+    name: 'Instagram',
+    cadence: [5, 5, 5],
+    formats: ['Reels 7–30 秒', '轮播', 'Stories'],
+    primaryMetric: 'sends per reach（分享/触达）',
+    firstGate: '非粉丝触达占比上升，sends/reach 高于账号均值',
+    levers: ['每条设计一个转发理由', 'Trial Reels 先测非粉丝', '标签 ≤5 个且精准'],
+    docs: 'docs/platforms/instagram.md',
+  },
+  facebook: {
+    id: 'facebook',
+    name: 'Facebook',
+    cadence: [5, 5, 5],
+    formats: ['Reels 15–30 秒', '图文', 'Groups 参与'],
+    primaryMetric: 'Reels 3 秒观看与分享数',
+    firstGate: '非粉丝触达占比明显上升',
+    levers: ['原生上传，不要带他台水印', '帖子发出后邀请点赞者关注', '进 3–5 个相关 Groups 先给价值'],
+    docs: 'docs/platforms/facebook.md',
+  },
+  xiaohongshu: {
+    id: 'xiaohongshu',
+    name: '小红书',
+    cadence: [5, 7, 7],
+    formats: ['图文 6–9 张 3:4', '视频 15–60 秒', '合集'],
+    primaryMetric: '封面点击率 / 收藏率',
+    firstGate: '发布后 2 小时内自然阅读明显高于账号均值',
+    levers: ['封面大字报 + 标题前 18 字放核心词', '每篇埋 1 个可被搜索的长尾词', '同设备矩阵号不超过 3 个'],
+    docs: 'docs/platforms/xiaohongshu.md',
+  },
+  bilibili: {
+    id: 'bilibili',
+    name: 'B站',
+    cadence: [3, 3, 2],
+    formats: ['横屏 8–15 分钟', '竖屏切片', '专栏'],
+    primaryMetric: '完播率 / 三连',
+    firstGate: '前 30 秒留存明显高于分区均值',
+    levers: ['前 3 个标签必须精准', '合集做关注转化', '预埋弹幕槽点'],
+    docs: 'docs/platforms/bilibili.md',
+  },
+  wechat: {
+    id: 'wechat',
+    name: '微信公众号',
+    cadence: [3, 4, 4],
+    formats: ['1500–3000 字长图文', '小绿书图片', '系列'],
+    primaryMetric: '打开率 / 完读率',
+    firstGate: '发布后 30 分钟内私域转发带来第一波推荐',
+    levers: ['发布后 30 分钟发动好友点「推荐」', '标题用数字 + 痛点 + 方案', '结尾设一个具体问题'],
+    docs: 'docs/platforms/wechat.md',
+  },
+  'wechat-channels': {
+    id: 'wechat-channels',
+    name: '视频号',
+    cadence: [7, 7, 5],
+    formats: ['竖屏 15–60 秒', '直播', '图文'],
+    primaryMetric: '完播率 / 转发率',
+    firstGate: '发布后 30 分钟内朋友点赞带来第二圈扩散',
+    levers: ['发布即转 3–5 个精准群', '结尾埋转发钩子（非利诱）', '直播做第二增长曲线'],
+    docs: 'docs/platforms/wechat-channels.md',
+  },
+  weibo: {
+    id: 'weibo',
+    name: '微博',
+    cadence: [10, 14, 10],
+    formats: ['短图文 ≤140 字', '九宫格', '竖屏短视频'],
+    primaryMetric: '互动率 / 单条涨粉',
+    firstGate: '话题阅读量与评论数同时起量',
+    levers: ['提前 1–3 天在超话铺垫', '热榜 30 分钟内跟进', '每周转发不超过 2 条'],
+    docs: 'docs/platforms/weibo.md',
+  },
+};
+
+export function getPlatform(id: string): PlatformProfile {
+  const p = PLATFORMS[id as PlatformId];
+  if (!p) {
+    throw new Error(`未知平台：${id}\n可用平台：${Object.keys(PLATFORMS).join(', ')}`);
+  }
+  return p;
+}

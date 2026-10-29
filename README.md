@@ -50,6 +50,25 @@ X 奖励观点，YouTube 奖励留存，TikTok 奖励前三秒，Reddit 奖励�
 
 初始化阶段，暂无可用代码。下一步先做「账号 + 平台 → 定位与选题」的最小闭环。
 
+## 使用
+
+```bash
+npm install
+
+# 生成 30 天排期
+npx tsx src/cli.ts plan --platform xiaohongshu \
+  --account "做独立开发的技术人" --niche "独立开发/出海"
+
+# 导出给发布工具
+npx tsx src/cli.ts plan --platform x --account "..." --niche "..." --json --out plan.json
+npx tsx src/cli.ts publish --plan plan.json --to postiz --dry-run
+npx tsx src/cli.ts publish --plan plan.json --to sau --dry-run
+```
+
+- `--to postiz` 走 Postiz 官方 SDK，需要 `POSTIZ_API_KEY` + `POSTIZ_INTEGRATION_ID`
+- `--to sau` 调 social-auto-upload，用 `SAU_CMD` / `SAU_ARGS` 指定命令（国内平台）
+- 两个适配器默认 dry-run，只打印将要提交的内容
+
 ## 文档
 
 - [平台起号知识库](docs/platforms/README.md) —— 13 个平台从 0 到 1 的起号方法
