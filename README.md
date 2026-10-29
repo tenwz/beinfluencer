@@ -54,6 +54,7 @@ X 奖励观点，YouTube 奖励留存，TikTok 奖励前三秒，Reddit 奖励�
 
 - [平台起号知识库](docs/platforms/README.md) —— 13 个平台从 0 到 1 的起号方法
 - [文案](docs/copy.md) —— 标语、承诺口径与使用边界
+- [生态调研](docs/ecosystem.md) —— 可直接复用的开源项目与许可风险
 
 ## License
 
