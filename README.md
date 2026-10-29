@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/platforms.svg" width="1120" alt="X · TikTok · YouTube · Instagram · Facebook · Reddit · Threads · Telegram · Discord · WeChat · Xiaohongshu · Bilibili">
+</p>
+
+<p align="center">
   <img src="assets/logo.svg" width="96" alt="beinfluencer">
 </p>
 
