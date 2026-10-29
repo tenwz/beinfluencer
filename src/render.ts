@@ -25,8 +25,8 @@ export function renderMarkdown(plan: Plan): string {
   lines.push('## 这个平台的三个杠杆');
   for (const l of platform.levers) lines.push(`- ${l}`);
   lines.push('');
-  lines.push(`## 依据`);
-  lines.push(`平台打法见 [${platform.docs}](../../${platform.docs})。`);
+  lines.push('## 依据');
+  lines.push('平台打法来自内部知识库，不随仓库公开。');
   lines.push('');
   lines.push('> 排期是起点，不是保证。按首测门槛判断是否换钩子，不要因为一条没起来就换赛道。');
   return lines.join('\n');

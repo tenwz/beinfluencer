@@ -24,3 +24,6 @@ __pycache__/
 # 日志
 *.log
 .beinfluencer/
+
+# 内部资料（不公开）
+.internal/
