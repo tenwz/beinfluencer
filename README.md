@@ -24,8 +24,8 @@
 </p>
 
 <p align="center">
-  <a href="https://tenwz.github.io/beinfluencer/">落地页</a> ·
-  <a href="assets/beinfluencer-30-day-plan.pdf">30 天排期模板（PDF）</a>
+  <a href="assets/beinfluencer-30-day-plan.pdf">30 天排期模板（PDF，可打印）</a> ·
+  <a href="index.html">落地页源码</a>
 </p>
 
 ---
